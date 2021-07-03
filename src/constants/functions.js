@@ -52,4 +52,20 @@ const deleteNote = (id) => {
   });
 };
 
-export { addNote, getAllNotes, getNote, deleteNote, storageKey };
+const updateNote = (id, noteData) => {
+  AsyncStorage.getItem(storageKey, (err, storage) => {
+    var allNotes = JSON.parse(storage);
+    var newArray = allNotes.map((note) => {
+      if (note.id === id) {
+        console.log({ noteData });
+        note.title = noteData.title;
+        note.body = noteData.body;
+        note.lastModified = new Date();
+      }
+      return note;
+    });
+    AsyncStorage.setItem(storageKey, JSON.stringify(newArray));
+  });
+};
+
+export { addNote, getAllNotes, getNote, deleteNote, updateNote, storageKey };

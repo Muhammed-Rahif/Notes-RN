@@ -17,7 +17,11 @@ export default function ViewNoteActions({ id }) {
 
   return (
     <View style={styles.container}>
-      <TouchableNativeFeedback>
+      <TouchableNativeFeedback
+        onPress={() => {
+          navigation.navigate("Edit note", { id });
+        }}
+      >
         <View style={styles.editBtn}>
           <Text style={styles.btnText}>
             Edit

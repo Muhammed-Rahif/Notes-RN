@@ -15,7 +15,7 @@ export default function ViewNoteContent({}) {
     getNote(route.params.id).then((note) => {
       setNote(note);
     });
-  }, []);
+  }, [note]);
 
   return (
     <>
