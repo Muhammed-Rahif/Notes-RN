@@ -5,11 +5,16 @@ import {
   TouchableNativeFeedback,
   View,
   Dimensions,
+  Alert,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faPencilAlt, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { deleteNote } from "../../constants/functions";
 
-export default function ViewNoteActions() {
+export default function ViewNoteActions({ id }) {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <TouchableNativeFeedback>
@@ -23,7 +28,29 @@ export default function ViewNoteActions() {
       </TouchableNativeFeedback>
       <TouchableNativeFeedback>
         <View style={styles.deleteBtn}>
-          <Text style={styles.btnText}>
+          <Text
+            style={styles.btnText}
+            onPress={() => {
+              Alert.alert(
+                "Are you want to delete this note ?",
+                "Remember : Once you deleted, you can't recover this note!",
+                [
+                  {
+                    text: "Cancel",
+                    onPress: () => console.log("Cancel Pressed"),
+                    style: "cancel",
+                  },
+                  {
+                    text: "Ok",
+                    onPress: () => {
+                      deleteNote(id);
+                      navigation.navigate("Home");
+                    },
+                  },
+                ]
+              );
+            }}
+          >
             Delete
             {"  "}
             <FontAwesomeIcon icon={faTrash} color="white" />

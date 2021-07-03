@@ -44,4 +44,12 @@ const getNote = (id) => {
   });
 };
 
-export { addNote, getAllNotes, getNote, storageKey };
+const deleteNote = (id) => {
+  AsyncStorage.getItem(storageKey, (err, storage) => {
+    var allNotes = JSON.parse(storage);
+    var newArray = allNotes.filter((note) => note.id !== id);
+    AsyncStorage.setItem(storageKey, JSON.stringify(newArray));
+  });
+};
+
+export { addNote, getAllNotes, getNote, deleteNote, storageKey };

@@ -34,7 +34,7 @@ export default function ViewNoteContent({}) {
           <Text style={styles.body}>{note ? note.body : "Loading..!"}</Text>
         </View>
       </ScrollView>
-      <ViewNoteActions />
+      <ViewNoteActions id={route.params.id} />
     </>
   );
 }
