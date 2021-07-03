@@ -10,6 +10,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { addNote } from "../../constants/functions";
 import HorizontalLine from "../HorizontalLine/HorizontalLine";
+import uuid from "react-native-uuid";
 
 export default function CreateNoteContent() {
   const navigation = useNavigation();
@@ -43,7 +44,7 @@ export default function CreateNoteContent() {
         <TouchableNativeFeedback
           background={TouchableNativeFeedback.Ripple("", true)}
           onPress={() => {
-            addNote({ title, body, lastModified: new Date() });
+            addNote({ title, body, lastModified: new Date(), id: uuid.v4() });
             navigation.navigate("Home");
           }}
         >
@@ -70,7 +71,7 @@ const styles = StyleSheet.create({
     height: 50,
     margin: 12,
     borderWidth: 1,
-    paddingLeft: 12,
+    padding: 12,
     fontSize: 18,
     borderRadius: 12,
     fontWeight: "bold",
@@ -91,8 +92,7 @@ const styles = StyleSheet.create({
     borderColor: "white",
     margin: 12,
     borderWidth: 1,
-    paddingLeft: 12,
-    paddingTop: 12,
+    padding: 12,
     fontSize: 18,
     borderRadius: 12,
     display: "flex",

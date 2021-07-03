@@ -2,14 +2,15 @@ import { AsyncStorage } from "react-native";
 const storageKey = "Notes";
 
 const getAllNotes = () => {
-  AsyncStorage.getItem(storageKey, (err, allNotes) => {
-    if (allNotes) {
-      allNotes = JSON.parse(allNotes);
-      console.log({ allNotes });
-      return allNotes;
-    } else {
-      return [];
-    }
+  return new Promise((resolve, reject) => {
+    AsyncStorage.getItem(storageKey, (err, allNotes) => {
+      if (allNotes) {
+        allNotes = JSON.parse(allNotes);
+        resolve(allNotes);
+      } else {
+        resolve([]);
+      }
+    });
   });
 };
 
@@ -33,4 +34,14 @@ const addNote = (noteData) => {
   });
 };
 
-export { addNote, getAllNotes, storageKey };
+const getNote = (id) => {
+  return new Promise((resolve, reject) => {
+    AsyncStorage.getItem(storageKey, (err, storage) => {
+      var allNotes = JSON.parse(storage);
+      var note = allNotes.find((note) => note.id === id);
+      resolve(note);
+    });
+  });
+};
+
+export { addNote, getAllNotes, getNote, storageKey };

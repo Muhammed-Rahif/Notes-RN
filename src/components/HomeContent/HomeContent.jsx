@@ -4,20 +4,15 @@ import styles from "./styles";
 import HorizontalLine from "../HorizontalLine/HorizontalLine";
 import NoteCard from "../NoteCard/NoteCard";
 import CreateNoteButton from "../CreateNoteButton/CreateNoteButton";
-import { storageKey } from "../../constants/functions";
+import { getAllNotes, storageKey } from "../../constants/functions";
 import { Text } from "react-native";
 
 function HomeContent(props) {
   const [allNotes, setAllNotes] = useState([]);
 
   useEffect(() => {
-    AsyncStorage.getItem(storageKey, (err, allNotes) => {
-      if (allNotes) {
-        allNotes = JSON.parse(allNotes);
-        setAllNotes(allNotes);
-      } else {
-        setAllNotes([]);
-      }
+    getAllNotes().then((allNotes) => {
+      setAllNotes(allNotes);
     });
   }, [allNotes]);
 
@@ -26,7 +21,12 @@ function HomeContent(props) {
       <ScrollView style={styles.scroller}>
         {allNotes.length > 0 ? (
           allNotes.map((note, key) => (
-            <NoteCard title={note.title} body={note.body} key={key} />
+            <NoteCard
+              title={note.title}
+              body={note.body}
+              id={note.id}
+              key={key}
+            />
           ))
         ) : (
           <Text style={styles.noNotesTxt}>No notes found!</Text>

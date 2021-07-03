@@ -7,6 +7,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 // Screens
 import HomeScreen from "./src/screens/Home";
 import CreateNoteScreen from "./src/screens/CreateNote";
+import ViewNoteScreen from "./src/screens/ViewNote";
 
 const Stack = createStackNavigator();
 
@@ -36,6 +37,11 @@ export default function App() {
             name="Create note"
             component={CreateNoteScreen}
             options={{ title: "Create a note" }}
+          />
+          <Stack.Screen
+            name="View note"
+            component={ViewNoteScreen}
+            options={{ title: "View note" }}
           />
         </Stack.Navigator>
       </View>
