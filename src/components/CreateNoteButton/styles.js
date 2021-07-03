@@ -14,7 +14,7 @@ export default StyleSheet.create({
     padding: 12,
     marginBottom: 22,
     borderRadius: 12,
-    width: 140,
+    width: 160,
   },
   btnText: {
     color: "white",

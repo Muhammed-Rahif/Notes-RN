@@ -1,5 +1,5 @@
 Arguments: 
-  /snap/node/4890/bin/node /snap/node/4890/bin/yarn.js install
+  /snap/node/4890/bin/node /snap/node/4890/bin/yarn.js add @fortawesome/free-solid-svg-icons
 
 PATH: 
   /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -14,17 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: EACCES: permission denied, write
-      at writeSync (fs.js:679:3)
-      at SyncWriteStream._write (internal/fs/sync_write_stream.js:24:3)
-      at doWrite (_stream_writable.js:403:12)
-      at writeOrBuffer (_stream_writable.js:387:5)
-      at SyncWriteStream.Writable.write (_stream_writable.js:318:11)
-      at Object.cursorTo (readline.js:1195:17)
-      at writeOnNthLine (/snap/node/4890/lib/cli.js:49677:14)
-      at Spinner.render (/snap/node/4890/lib/cli.js:97426:48)
-      at Spinner.start (/snap/node/4890/lib/cli.js:97413:10)
-      at ConsoleReporter.activity (/snap/node/4890/lib/cli.js:96959:13)
+  Error: EEXIST: file already exists, symlink '../../../../../../../../../parser/bin/babel-parser.js' -> '/home/muhammed-rahif/My Files/My Programming Workspace/Notes/node_modules/@babel/preset-env/node_modules/@babel/helper-compilation-targets/node_modules/@babel/core/node_modules/.bin/parser'
 
 npm manifest: 
   {
@@ -50,6 +40,7 @@ npm manifest:
       "react-native-reanimated": "^2.2.0",
       "react-native-safe-area-context": "^3.2.0",
       "react-native-screens": "^3.4.0",
+      "react-native-uuid": "^2.0.1",
       "react-native-web": "~0.13.12"
     },
     "devDependencies": {
@@ -4889,6 +4880,11 @@ Lockfile:
     integrity sha512-cg+q9MRnVdeOcJyvJtqffoXLur/C2wHA/7IO2+FAipzTlgHbbM1mTuSM7qG+SeiQjoIs4mHOEf7A0ziPKW04sA==
     dependencies:
       warn-once "^0.1.0"
+  
+  react-native-uuid@^2.0.1:
+    version "2.0.1"
+    resolved "https://registry.yarnpkg.com/react-native-uuid/-/react-native-uuid-2.0.1.tgz#ed4e2dfb1683eddb66967eb5dca140dfe1abddb9"
+    integrity sha512-cptnoIbL53GTCrWlb/+jrDC6tvb7ypIyzbXNJcpR3Vab0mkeaaVd5qnB3f0whXYzS+SMoSQLcUUB0gEWqkPC0g==
   
   react-native-web@~0.13.12:
     version "0.13.18"

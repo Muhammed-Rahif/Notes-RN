@@ -6,18 +6,28 @@ import {
   View,
   Dimensions,
 } from "react-native";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { faPencilAlt, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 export default function ViewNoteActions() {
   return (
     <View style={styles.container}>
       <TouchableNativeFeedback>
         <View style={styles.editBtn}>
-          <Text style={styles.btnText}>Edit</Text>
+          <Text style={styles.btnText}>
+            Edit
+            {"  "}
+            <FontAwesomeIcon icon={faPencilAlt} color="white" />
+          </Text>
         </View>
       </TouchableNativeFeedback>
       <TouchableNativeFeedback>
         <View style={styles.deleteBtn}>
-          <Text style={styles.btnText}>Delete</Text>
+          <Text style={styles.btnText}>
+            Delete
+            {"  "}
+            <FontAwesomeIcon icon={faTrash} color="white" />
+          </Text>
         </View>
       </TouchableNativeFeedback>
     </View>

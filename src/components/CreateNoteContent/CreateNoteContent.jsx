@@ -11,6 +11,8 @@ import { useNavigation } from "@react-navigation/native";
 import { addNote } from "../../constants/functions";
 import HorizontalLine from "../HorizontalLine/HorizontalLine";
 import uuid from "react-native-uuid";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export default function CreateNoteContent() {
   const navigation = useNavigation();
@@ -49,7 +51,11 @@ export default function CreateNoteContent() {
           }}
         >
           <View style={{ borderRadius: 4 }}>
-            <Text style={styles.btnText}>+ Create note</Text>
+            <Text style={styles.btnText}>
+              <FontAwesomeIcon icon={faPlus} color="white" />
+              {"  "}
+              Create note
+            </Text>
           </View>
         </TouchableNativeFeedback>
       </View>

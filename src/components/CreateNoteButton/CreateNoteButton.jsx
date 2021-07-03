@@ -2,6 +2,8 @@ import React from "react";
 import { Text, View, TouchableNativeFeedback } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import styles from "./styles";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export default function CreateNoteButton() {
   const navigation = useNavigation();
@@ -14,7 +16,11 @@ export default function CreateNoteButton() {
         }}
       >
         <View style={styles.btn}>
-          <Text style={styles.btnText}>+ Create a note</Text>
+          <Text style={styles.btnText}>
+            <FontAwesomeIcon icon={faPlus} color="white" />
+            {"  "}
+            Create a note
+          </Text>
         </View>
       </TouchableNativeFeedback>
     </View>
