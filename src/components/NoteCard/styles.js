@@ -2,9 +2,9 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   container: {
-    height: 120,
-    marginTop: 20,
-    marginBottom: 20,
+    height: "auto",
+    marginTop: 13,
+    marginBottom: 0,
     margin: 20,
   },
   card: {

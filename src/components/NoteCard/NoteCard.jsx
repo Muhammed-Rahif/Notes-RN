@@ -3,18 +3,17 @@ import { Text, View, TouchableNativeFeedback } from "react-native";
 import styles from "./styles";
 import HR from "../HorizontalLine/HorizontalLine";
 
-export default function NoteCard() {
+export default function NoteCard({ title = "", body = "" }) {
   return (
     <View style={styles.container}>
       <TouchableNativeFeedback style={{ borderRadius: 12 }}>
         <View style={styles.card}>
-          <Text style={styles.noteTitle}>Your note title</Text>
+          <Text numberOfLines={4} style={styles.noteTitle}>
+            {title}
+          </Text>
           <HR />
-          <Text numberOfLines={4} style={styles.noteBody}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga,
-            neque, excepturi quibusdam corporis hic asperiores, quod ea dicta
-            deserunt esse nostrum laboriosam voluptatem aliquid! Possimus natus
-            delectus pariatur iusto deserunt.
+          <Text numberOfLines={8} style={styles.noteBody}>
+            {body}
           </Text>
         </View>
       </TouchableNativeFeedback>
