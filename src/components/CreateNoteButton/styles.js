@@ -7,7 +7,7 @@ export default StyleSheet.create({
     position: "absolute",
     display: "flex",
     alignItems: "center",
-    top: Dimensions.get("window").height - 40,
+    top: (Dimensions.get("window").height * 85) / 100,
   },
   btn: {
     backgroundColor: "#44b158",
