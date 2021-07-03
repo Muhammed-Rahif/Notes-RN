@@ -27,7 +27,7 @@ const addNote = (noteData) => {
       } else {
         let allNotes = [];
         allNotes.push(noteData);
-        AsyncStorage.setItem(storageKey, allNotes);
+        AsyncStorage.setItem(storageKey, JSON.stringify(allNotes));
       }
     }
   });
