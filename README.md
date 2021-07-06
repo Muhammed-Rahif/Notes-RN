@@ -13,7 +13,7 @@
     <br />
     <a href="https://github.com/Muhammed-Rahif/Notes/">Project Directory</a>
     ·
-    <a href="https://github.com/Muhammed-Rahif/Notes/">Report Bug</a>
+    <a href="https://github.com/Muhammed-Rahif/Notes/issues">Report Bug</a>
     ·
     <a href="https://github.com/Muhammed-Rahif/Notes/pulls">Contribute</a>
   </p>
