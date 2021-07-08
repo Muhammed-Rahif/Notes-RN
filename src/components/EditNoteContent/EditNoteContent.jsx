@@ -6,6 +6,7 @@ import {
   TextInput,
   TouchableNativeFeedback,
   ScrollView,
+  Dimensions,
 } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { addNote, getNote, updateNote } from "../../constants/functions";
@@ -31,7 +32,6 @@ export default function EditNoteContent() {
 
   return (
     <ScrollView style={styles.container}>
-      {/* <Text style={styles.titleLabel}>Title</Text> */}
       <TextInput
         style={styles.titleInput}
         placeholder="Title"
@@ -45,7 +45,7 @@ export default function EditNoteContent() {
         style={styles.bodyInput}
         placeholder="Body"
         multiline
-        numberOfLines={22}
+        // numberOfLines={18}
         textAlignVertical="top"
         value={body}
         onChangeText={(body) => {
@@ -119,6 +119,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
+    height: Dimensions.get("window").height * 0.67,
   },
   btnWrapper: {
     backgroundColor: "#44b158",
