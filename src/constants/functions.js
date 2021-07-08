@@ -16,12 +16,10 @@ const getAllNotes = () => {
 
 const addNote = (noteData) => {
   AsyncStorage.getItem(storageKey, (err, storage) => {
-    console.log({ storage });
     if (err) {
       console.error(err);
     } else {
       storage = JSON.parse(storage);
-      console.log(storage);
       if (storage) {
         storage.push(noteData);
         AsyncStorage.setItem(storageKey, JSON.stringify(storage));
@@ -57,7 +55,6 @@ const updateNote = (id, noteData) => {
     var allNotes = JSON.parse(storage);
     var newArray = allNotes.map((note) => {
       if (note.id === id) {
-        console.log({ noteData });
         note.title = noteData.title;
         note.body = noteData.body;
         note.lastModified = new Date();
