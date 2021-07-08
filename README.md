@@ -21,6 +21,16 @@
 
 ---
 
+## 🧐 Screenshots of Screens <a name = "screens"></a>
+
+<br />
+<div align="center">
+  <img width="24%" src="./assets/Home Screen.jpg" alt="Home Screen"/>
+  <img width="24%" src="./assets/View Note Screen.jpg" alt="View Note Screen"/>
+  <img width="24%" src="./assets/Edit Note Screen.jpg" alt="Edit Note Screen"/>
+  <img width="24%" src="./assets/Delete Note Alert.jpg" alt="Delete Note Alert"/>
+</div>
+
 ## 🧐 About <a name = "about"></a>
 
 This is an android app made for creating notes, to dos and memos. You can create notes and save them in your phone storage. And also edit, update and delete them as you wish. All your notes will only storing in your local storage.
