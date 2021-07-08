@@ -21,7 +21,7 @@
 
 ---
 
-## 🧐 Screenshots of Screens <a name = "screens"></a>
+## 📱️ Screenshots of Screens <a name = "screens"></a>
 
 <br />
 <div align="center">
