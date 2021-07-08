@@ -8,7 +8,7 @@
   <p align="center">
     An awesome android app made for creating notes and memos 🎉️ !
     <br />
-    <a href="https://drive.google.com/file/d/1NQt3R8tdokQqbnVShXjDtk7cA5yY9c0y/view?usp=sharing"><strong>Download APK »</strong></a>
+    <a href="https://drive.google.com/file/d/1PAp08CJ-OgNCRJXsAaoqvJ0bZC0IFPLQ/view?usp=sharing"><strong>Download APK »</strong></a>
     <br />
     <br />
     <a href="https://github.com/Muhammed-Rahif/Notes/releases">Latest releases</a>
@@ -43,7 +43,7 @@ Okay let's see how to use this application. As you know this is not large applic
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [React Native](https://reactnative.dev/) - A JS cross platform developing framwork
+- [React Native](https://reactnative.dev/) - React Native is a JavaScript framework for building cross platform softwares
 
 ## ✍️ Authors <a name = "authors"></a>
 
