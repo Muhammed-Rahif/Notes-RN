@@ -6,17 +6,39 @@ import {
   View,
   Dimensions,
   Alert,
+  Share,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { faPencilAlt, faTrash } from "@fortawesome/free-solid-svg-icons";
-import { deleteNote } from "../../constants/functions";
+import {
+  faPencilAlt,
+  faTrash,
+  faShareAlt,
+} from "@fortawesome/free-solid-svg-icons";
+import { deleteNote, getNote } from "../../constants/functions";
 
 export default function ViewNoteActions({ id }) {
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
+      <TouchableNativeFeedback
+        onPress={() => {
+          getNote(id).then((note) => {
+            Share.share({
+              message: `*${note.title}*\n\n${note.body}`,
+            });
+          });
+        }}
+      >
+        <View style={styles.shareBtn}>
+          <Text style={styles.btnText}>
+            Share
+            {"  "}
+            <FontAwesomeIcon icon={faShareAlt} color="white" />
+          </Text>
+        </View>
+      </TouchableNativeFeedback>
       <TouchableNativeFeedback
         onPress={() => {
           navigation.navigate("Edit note", { id });
@@ -81,15 +103,19 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
     borderRadius: 12,
-    marginLeft: 44,
-    marginRight: 44,
-    width: Dimensions.get("window").width - 88,
+    marginLeft: 34,
+    marginRight: 34,
+    width: Dimensions.get("window").width - 68,
   },
-  editBtn: {
+  shareBtn: {
     backgroundColor: "#44b158",
     flex: 1,
     borderBottomLeftRadius: 12,
     borderTopLeftRadius: 12,
+  },
+  editBtn: {
+    backgroundColor: "#0d6efd",
+    flex: 1,
   },
   deleteBtn: {
     backgroundColor: "red",
