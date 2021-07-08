@@ -11,6 +11,8 @@
     <a href="https://drive.google.com/file/d/1NQt3R8tdokQqbnVShXjDtk7cA5yY9c0y/view?usp=sharing"><strong>Download APK »</strong></a>
     <br />
     <br />
+    <a href="https://github.com/Muhammed-Rahif/Notes/releases">Latest releases</a>
+    ·
     <a href="https://github.com/Muhammed-Rahif/Notes/">Project Directory</a>
     ·
     <a href="https://github.com/Muhammed-Rahif/Notes/issues">Report Bug</a>
