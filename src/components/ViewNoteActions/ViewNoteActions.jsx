@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     flexDirection: "row",
     height: 40,
-    top: (Dimensions.get("window").height * 85) / 100,
+    top: Dimensions.get("window").height * 0.85,
     shadowColor: "#000",
     shadowOffset: { width: 0.2, height: 0.2 },
     shadowOpacity: 0.25,
