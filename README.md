@@ -44,6 +44,7 @@ Okay let's see how to use this application. As you know this is not large applic
 ## ⛏️ Built Using <a name = "built_using"></a>
 
 - [React Native](https://reactnative.dev/) - React Native is a JavaScript framework for building cross platform softwares
+- [Expo](https://expo.dev/) - Expo is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React.
 
 ## ✍️ Authors <a name = "authors"></a>
 
